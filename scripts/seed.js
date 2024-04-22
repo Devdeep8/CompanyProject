@@ -9,6 +9,7 @@ const bcrypt = require('bcrypt');
 
 async function seedUsers(client) {
   try {
+    console.log(client)
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
     // Create the "users" table if it doesn't exist
     const createTable = await client.sql`
