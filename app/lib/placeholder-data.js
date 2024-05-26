@@ -7,12 +7,6 @@ const users = [
     email: 'user@nextmail.com',
     password: '123456',
   },
-  {
-    id: '410544b2-4001-4271-80085-fec4b6a6442a',
-    name: 'Devdeep',
-    email: 'Devdeed@gmail.com',
-    password: 'devdeed123456',
-  },
 ];
 
 const customers = [
@@ -64,18 +58,7 @@ const customers = [
     email: 'emil@kowalski.com',
     image_url: '/customers/emil-kowalski.png',
   },
-  {
-    id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
-    name: 'i dont know',
-    email: 'amy@burns.com',
-    image_url: '/customers/amy-burns.png',
-  },
-  {
-    id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
-    name: 'Balazs Orban',
-    email: 'balazs@orban.com',
-    image_url: '/customers/balazs-orban.png',
-  },
+  
 ];
 
 const invoices = [
@@ -91,84 +74,7 @@ const invoices = [
     status: 'pending',
     date: '2022-11-14',
   },
-  {
-    customer_id: customers[4].id,
-    amount: 3040,
-    status: 'paid',
-    date: '2022-10-29',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 44800,
-    status: 'paid',
-    date: '2023-09-10',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 34577,
-    status: 'pending',
-    date: '2023-08-05',
-  },
-  {
-    customer_id: customers[7].id,
-    amount: 54246,
-    status: 'pending',
-    date: '2023-07-16',
-  },
-  {
-    customer_id: customers[6].id,
-    amount: 666,
-    status: 'pending',
-    date: '2023-06-27',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 32545,
-    status: 'paid',
-    date: '2023-06-09',
-  },
-  {
-    customer_id: customers[4].id,
-    amount: 1250,
-    status: 'paid',
-    date: '2023-06-17',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8546,
-    status: 'paid',
-    date: '2023-06-07',
-  },
-  {
-    customer_id: customers[1].id,
-    amount: 500,
-    status: 'paid',
-    date: '2023-08-19',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8945,
-    status: 'paid',
-    date: '2023-06-03',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 8945,
-    status: 'paid',
-    date: '2023-06-18',
-  },
-  {
-    customer_id: customers[0].id,
-    amount: 8945,
-    status: 'paid',
-    date: '2023-10-04',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 1000,
-    status: 'paid',
-    date: '2022-06-05',
-  },
+ 
 ];
 
 const revenue = [

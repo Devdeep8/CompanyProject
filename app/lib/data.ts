@@ -20,8 +20,8 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -50,6 +50,7 @@ export async function fetchLatestInvoices() {
       ...invoice,
       amount: formatCurrency(invoice.amount),
     }));
+    // console.log(data);
 
     return latestInvoices;
   } catch (error) {
@@ -188,12 +189,11 @@ export async function fetchCustomers() {
         id,
         name
       FROM customers
-      ORDER BY name ASC
     `;
 
     const customers = data.rows;
     // noStore();
-
+    console.log(customers);
     return customers;
   } catch (err) {
     console.error('Database Error:', err);
