@@ -6,12 +6,15 @@ import {
   KeyIcon,
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
-import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from '@/app/ui/button';
+import { signIn } from 'next-auth/react';
+// import { ArrowRightIcon } from '@heroicons/react/20/solid';
+// import { Button } from '@/app/ui/button';
 import { useFormState, useFormStatus } from 'react-dom';
 import { authenticate } from '@/app/lib/actions';
+import { useRouter } from 'next/navigation';
  
 export default function LoginForm() {
+  const router = useRouter();
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
  
   return (
@@ -80,12 +83,28 @@ export default function LoginForm() {
 }
  
 function LoginButton() {
+<<<<<<< HEAD
   const { pending } = useFormStatus();
   
  
+=======
+  const router2 = useRouter()
+    const handleLogin = async (provider: string) => {
+      try {
+        await signIn(provider);
+        router2.push('/dashboard');
+
+      } catch (error) {
+        console.error('Error signing in:', error);
+        router2.push('/');
+        // Handle login error (display error message, etc.)
+      }
+    };
+>>>>>>> f5b95827c4f0b4b50081e03d9e36b0780feb0599
   return (
-    <Button className="mt-4 w-full" aria-disabled={pending}>
-      Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
-    </Button>
+    <>
+    <button onClick={() => handleLogin('credentials')}>Login with Email/Password</button>
+    <button onClick={() => handleLogin('github')}>Login with GitHub</button>
+    </>
   );
 }

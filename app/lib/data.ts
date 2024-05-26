@@ -193,7 +193,11 @@ export async function fetchCustomers() {
 
     const customers = data.rows;
     // noStore();
+<<<<<<< HEAD
     console.log(customers);
+=======
+    // console.log(customers);
+>>>>>>> f5b95827c4f0b4b50081e03d9e36b0780feb0599
     return customers;
   } catch (err) {
     console.error('Database Error:', err);
